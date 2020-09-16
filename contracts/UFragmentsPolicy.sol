@@ -284,7 +284,7 @@ contract UFragmentsPolicy is Ownable {
      *      It is called at the time of contract creation to invoke parent class initializers and
      *      initialize the contract's state variables.
      */
-    function initialize(address owner_, UFragments uFrags_, uint256 yfiValue)
+    function initialize(address owner_, UFragments uFrags_)
         public
         initializer
     {
@@ -301,7 +301,7 @@ contract UFragmentsPolicy is Ownable {
         epoch = 0;
 
         uFrags = uFrags_;
-        baseYFIValue = yfiValue;
+        baseYFIValue = yfiOracle.getData();
     }
 
     /**
