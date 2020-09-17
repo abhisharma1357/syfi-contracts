@@ -12,14 +12,14 @@
     "absolutePath": "/D/Blockchain/Internship/Folder/uFragments/contracts/lib/UInt256Lib.sol",
     "exportedSymbols": {
       "UInt256Lib": [
-        1761
+        1745
       ]
     },
-    "id": 1762,
+    "id": 1746,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1733,
+        "id": 1717,
         "literals": [
           "solidity",
           "0.4",
@@ -34,19 +34,19 @@
         "contractKind": "library",
         "documentation": "@title Various utilities useful for uint256.\r",
         "fullyImplemented": true,
-        "id": 1761,
+        "id": 1745,
         "linearizedBaseContracts": [
-          1761
+          1745
         ],
         "name": "UInt256Lib",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 1742,
+            "id": 1726,
             "name": "MAX_INT256",
             "nodeType": "VariableDeclaration",
-            "scope": 1761,
+            "scope": 1745,
             "src": "116:58:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -55,7 +55,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1734,
+              "id": 1718,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "116:7:4",
@@ -66,7 +66,7 @@
             },
             "value": {
               "argumentTypes": null,
-              "id": 1741,
+              "id": 1725,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -84,7 +84,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1739,
+                    "id": 1723,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -95,7 +95,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "31",
-                          "id": 1736,
+                          "id": 1720,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -118,7 +118,7 @@
                             "typeString": "int_const 1"
                           }
                         ],
-                        "id": 1735,
+                        "id": 1719,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -131,7 +131,7 @@
                         },
                         "typeName": "uint256"
                       },
-                      "id": 1737,
+                      "id": 1721,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -150,7 +150,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "323535",
-                      "id": 1738,
+                      "id": 1722,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -172,7 +172,7 @@
                     }
                   }
                 ],
-                "id": 1740,
+                "id": 1724,
                 "isConstant": false,
                 "isInlineArray": false,
                 "isLValue": false,
@@ -194,7 +194,7 @@
           },
           {
             "body": {
-              "id": 1759,
+              "id": 1743,
               "nodeType": "Block",
               "src": "350:70:4",
               "statements": [
@@ -208,18 +208,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 1752,
+                        "id": 1736,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 1750,
+                          "id": 1734,
                           "name": "a",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1744,
+                          "referencedDeclaration": 1728,
                           "src": "369:1:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -230,11 +230,11 @@
                         "operator": "<=",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 1751,
+                          "id": 1735,
                           "name": "MAX_INT256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1742,
+                          "referencedDeclaration": 1726,
                           "src": "374:10:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -255,21 +255,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 1749,
+                      "id": 1733,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2212,
-                        2213
+                        2196,
+                        2197
                       ],
-                      "referencedDeclaration": 2212,
+                      "referencedDeclaration": 2196,
                       "src": "361:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 1753,
+                    "id": 1737,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -283,7 +283,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1754,
+                  "id": 1738,
                   "nodeType": "ExpressionStatement",
                   "src": "361:24:4"
                 },
@@ -293,11 +293,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1756,
+                        "id": 1740,
                         "name": "a",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1744,
+                        "referencedDeclaration": 1728,
                         "src": "410:1:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -312,7 +312,7 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1755,
+                      "id": 1739,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -325,7 +325,7 @@
                       },
                       "typeName": "int256"
                     },
-                    "id": 1757,
+                    "id": 1741,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -339,15 +339,15 @@
                       "typeString": "int256"
                     }
                   },
-                  "functionReturnParameters": 1748,
-                  "id": 1758,
+                  "functionReturnParameters": 1732,
+                  "id": 1742,
                   "nodeType": "Return",
                   "src": "396:16:4"
                 }
               ]
             },
             "documentation": "@dev Safely converts a uint256 to an int256.\r",
-            "id": 1760,
+            "id": 1744,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -355,15 +355,15 @@
             "name": "toInt256Safe",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1745,
+              "id": 1729,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1744,
+                  "id": 1728,
                   "name": "a",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1760,
+                  "scope": 1744,
                   "src": "276:9:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -372,7 +372,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1743,
+                    "id": 1727,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "276:7:4",
@@ -389,15 +389,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1748,
+              "id": 1732,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1747,
+                  "id": 1731,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1760,
+                  "scope": 1744,
                   "src": "337:6:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -406,7 +406,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 1746,
+                    "id": 1730,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
                     "src": "337:6:4",
@@ -421,14 +421,14 @@
               ],
               "src": "336:8:4"
             },
-            "scope": 1761,
+            "scope": 1745,
             "src": "254:166:4",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1762,
+        "scope": 1746,
         "src": "88:335:4"
       }
     ],
@@ -438,14 +438,14 @@
     "absolutePath": "/D/Blockchain/Internship/Folder/uFragments/contracts/lib/UInt256Lib.sol",
     "exportedSymbols": {
       "UInt256Lib": [
-        1761
+        1745
       ]
     },
-    "id": 1762,
+    "id": 1746,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1733,
+        "id": 1717,
         "literals": [
           "solidity",
           "0.4",
@@ -460,19 +460,19 @@
         "contractKind": "library",
         "documentation": "@title Various utilities useful for uint256.\r",
         "fullyImplemented": true,
-        "id": 1761,
+        "id": 1745,
         "linearizedBaseContracts": [
-          1761
+          1745
         ],
         "name": "UInt256Lib",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 1742,
+            "id": 1726,
             "name": "MAX_INT256",
             "nodeType": "VariableDeclaration",
-            "scope": 1761,
+            "scope": 1745,
             "src": "116:58:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -481,7 +481,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1734,
+              "id": 1718,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "116:7:4",
@@ -492,7 +492,7 @@
             },
             "value": {
               "argumentTypes": null,
-              "id": 1741,
+              "id": 1725,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -510,7 +510,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1739,
+                    "id": 1723,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -521,7 +521,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "31",
-                          "id": 1736,
+                          "id": 1720,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -544,7 +544,7 @@
                             "typeString": "int_const 1"
                           }
                         ],
-                        "id": 1735,
+                        "id": 1719,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -557,7 +557,7 @@
                         },
                         "typeName": "uint256"
                       },
-                      "id": 1737,
+                      "id": 1721,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -576,7 +576,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "323535",
-                      "id": 1738,
+                      "id": 1722,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -598,7 +598,7 @@
                     }
                   }
                 ],
-                "id": 1740,
+                "id": 1724,
                 "isConstant": false,
                 "isInlineArray": false,
                 "isLValue": false,
@@ -620,7 +620,7 @@
           },
           {
             "body": {
-              "id": 1759,
+              "id": 1743,
               "nodeType": "Block",
               "src": "350:70:4",
               "statements": [
@@ -634,18 +634,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 1752,
+                        "id": 1736,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 1750,
+                          "id": 1734,
                           "name": "a",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1744,
+                          "referencedDeclaration": 1728,
                           "src": "369:1:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -656,11 +656,11 @@
                         "operator": "<=",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 1751,
+                          "id": 1735,
                           "name": "MAX_INT256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1742,
+                          "referencedDeclaration": 1726,
                           "src": "374:10:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -681,21 +681,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 1749,
+                      "id": 1733,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2212,
-                        2213
+                        2196,
+                        2197
                       ],
-                      "referencedDeclaration": 2212,
+                      "referencedDeclaration": 2196,
                       "src": "361:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 1753,
+                    "id": 1737,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -709,7 +709,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1754,
+                  "id": 1738,
                   "nodeType": "ExpressionStatement",
                   "src": "361:24:4"
                 },
@@ -719,11 +719,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1756,
+                        "id": 1740,
                         "name": "a",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1744,
+                        "referencedDeclaration": 1728,
                         "src": "410:1:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -738,7 +738,7 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1755,
+                      "id": 1739,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -751,7 +751,7 @@
                       },
                       "typeName": "int256"
                     },
-                    "id": 1757,
+                    "id": 1741,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -765,15 +765,15 @@
                       "typeString": "int256"
                     }
                   },
-                  "functionReturnParameters": 1748,
-                  "id": 1758,
+                  "functionReturnParameters": 1732,
+                  "id": 1742,
                   "nodeType": "Return",
                   "src": "396:16:4"
                 }
               ]
             },
             "documentation": "@dev Safely converts a uint256 to an int256.\r",
-            "id": 1760,
+            "id": 1744,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -781,15 +781,15 @@
             "name": "toInt256Safe",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1745,
+              "id": 1729,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1744,
+                  "id": 1728,
                   "name": "a",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1760,
+                  "scope": 1744,
                   "src": "276:9:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -798,7 +798,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1743,
+                    "id": 1727,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "276:7:4",
@@ -815,15 +815,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1748,
+              "id": 1732,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1747,
+                  "id": 1731,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1760,
+                  "scope": 1744,
                   "src": "337:6:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -832,7 +832,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 1746,
+                    "id": 1730,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
                     "src": "337:6:4",
@@ -847,14 +847,14 @@
               ],
               "src": "336:8:4"
             },
-            "scope": 1761,
+            "scope": 1745,
             "src": "254:166:4",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1762,
+        "scope": 1746,
         "src": "88:335:4"
       }
     ],
@@ -866,7 +866,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-09-16T10:46:45.286Z",
+  "updatedAt": "2020-09-17T12:11:01.265Z",
   "devdoc": {
     "methods": {},
     "title": "Various utilities useful for uint256.\r"

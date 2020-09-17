@@ -59,7 +59,7 @@ interface IUniswapV2Pair {
 }
 
 interface IOracle {
-    function getData() external returns (uint256);
+    function getData() external returns (uint256, uint256);
 }
 
 /**
@@ -86,12 +86,7 @@ contract UFragmentsPolicy is Ownable {
 
     UFragments public uFrags;
 
-    // Provides the current yfi value, as an 18 decimal fixed point number.
-    IOracle public yfiOracle;
-
-    // Market oracle provides the token/USD exchange rate as an 18 decimal fixed point number.
-    // (eg) An oracle value of 1.5e18 it would mean 1 Ample is trading for $1.50.
-    IOracle public tokenOracle;
+    IOracle public oracle;
 
     // YFI Price at the time of launch, as an 18 decimal fixed point number.
     uint256 private baseYFIValue;
@@ -133,7 +128,7 @@ contract UFragmentsPolicy is Ownable {
 
     // This module orchestrates the rebase execution and downstream notification.
     address public orchestrator;
-    address uniswapV2Pair = 0x2fDbAdf3C4D5A8666Bc06645B8358ab803996E28;
+    address uniswapV2Pair = 0x1117BCaf1116F643FE8B069e0897887F0354347d;
 
     modifier onlyOrchestrator() {
         require(msg.sender == orchestrator);
@@ -160,11 +155,9 @@ contract UFragmentsPolicy is Ownable {
         epoch = epoch.add(1);
 
         uint256 yfiRate;
-        yfiRate = yfiOracle.getData();
-        
         uint256 tokenRate;
-        tokenRate = tokenOracle.getData();
-        
+        (yfiRate, tokenRate) = oracle.getData();
+               
         uint256 newTargetPrice = yfiRate.mul(3 * 10 ** (DECIMALS - 6));
 
         if (tokenRate > MAX_RATE) {
@@ -190,26 +183,13 @@ contract UFragmentsPolicy is Ownable {
         emit LogRebase(epoch, yfiRate, tokenRate, supplyDelta, now);
     }
 
-    /**
-     * @notice Sets the reference to the YFI oracle.
-     * @param yfiOracle_ The address of the YFI oracle contract.
+     /**
+     * @notice Sets the reference to the oracle.
+     * @param _oracle The address of the oracle contract.
      */
-    function setYFIOracle(IOracle yfiOracle_)
-        external
-        onlyOwner
-    {
-        yfiOracle = yfiOracle_;
-    }
+    function setOracle(IOracle _oracle) external onlyOwner{
 
-    /**
-     * @notice Sets the reference to the market oracle.
-     * @param tokenOracle_ The address of the market oracle contract.
-     */
-    function setTokenOracle(IOracle tokenOracle_)
-        external
-        onlyOwner
-    {
-        tokenOracle = tokenOracle_;
+        oracle = _oracle;
     }
 
     /**
