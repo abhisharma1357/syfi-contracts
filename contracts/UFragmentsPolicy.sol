@@ -183,15 +183,6 @@ contract UFragmentsPolicy is Ownable {
         emit LogRebase(epoch, yfiRate, tokenRate, supplyDelta, now);
     }
 
-     /**
-     * @notice Sets the reference to the oracle.
-     * @param _oracle The address of the oracle contract.
-     */
-    function setOracle(IOracle _oracle) external onlyOwner{
-
-        oracle = _oracle;
-    }
-
     /**
      * @notice Sets the reference to the orchestrator.
      * @param orchestrator_ The address of the orchestrator contract.
@@ -264,11 +255,12 @@ contract UFragmentsPolicy is Ownable {
      *      It is called at the time of contract creation to invoke parent class initializers and
      *      initialize the contract's state variables.
      */
-    function initialize(address owner_, UFragments uFrags_)
+    function initialize(address owner_, UFragments uFrags_, IOracle _oracle)
         public
         initializer
     {
         Ownable.initialize(owner_);
+        oracle = _oracle;
 
         // deviationThreshold = 0.05e18 = 5e16
         deviationThreshold = 5 * 10 ** (DECIMALS-2);
