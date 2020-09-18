@@ -143,14 +143,14 @@ contract UFragmentsPolicy is Ownable {
      *      and targetRate is 0.006
      */
     function rebase() external onlyOrchestrator {
-        require(inRebaseWindow());
+        //require(inRebaseWindow());
 
         // This comparison also ensures there is no reentrancy.
-        require(lastRebaseTimestampSec.add(minRebaseTimeIntervalSec) < now);
+        //require(lastRebaseTimestampSec.add(minRebaseTimeIntervalSec) < now);
 
         // Snap the rebase time to the start of this window.
-        lastRebaseTimestampSec = now.sub(
-            now.mod(minRebaseTimeIntervalSec)).add(rebaseWindowOffsetSec);
+        // lastRebaseTimestampSec = now.sub(
+        //     now.mod(minRebaseTimeIntervalSec)).add(rebaseWindowOffsetSec);
 
         epoch = epoch.add(1);
 
