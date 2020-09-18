@@ -281,7 +281,7 @@ contract UFragmentsPolicy is Ownable {
         epoch = 0;
 
         uFrags = uFrags_;
-        baseYFIValue = yfiOracle.getData();
+        (baseYFIValue,) = oracle.getData();
     }
 
     /**
