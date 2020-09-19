@@ -188,6 +188,14 @@ contract UFragmentsPolicy is Ownable {
     }
 
     /**
+     * @notice Sets reference to the oracle.
+     * @param _oracle The address of Oracle.
+     */
+    function setOracle(IOracle _oracle) external onlyOwner{
+        oracle = _oracle;
+    }
+
+    /**
      * @notice Sets the reference to the orchestrator.
      * @param orchestrator_ The address of the orchestrator contract.
      */
