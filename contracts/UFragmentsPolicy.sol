@@ -59,7 +59,8 @@ interface IUniswapV2Pair {
 }
 
 interface IOracle {
-    function getData() external returns (uint256, uint256);
+    function getData() external returns (uint256, uint256, uint256, uint256);
+    function update() external;
 }
 
 /**
@@ -156,9 +157,12 @@ contract UFragmentsPolicy is Ownable {
 
         uint256 yfiRate;
         uint256 tokenRate;
-        (yfiRate, tokenRate) = oracle.getData();
+        
+        oracle.update();
+        (yfiRate, tokenRate, ,) = oracle.getData();
                
-        uint256 newTargetPrice = yfiRate.mul(3 * 10 ** (DECIMALS - 6));
+        uint256 newTargetPrice = (yfiRate.mul(3).div(10000)).div(10**9);
+        tokenRate = tokenRate.div(10**18);
 
         if (tokenRate > MAX_RATE) {
             tokenRate = MAX_RATE;
@@ -273,7 +277,9 @@ contract UFragmentsPolicy is Ownable {
         epoch = 0;
 
         uFrags = uFrags_;
-        (baseYFIValue,) = oracle.getData();
+        
+        oracle.update();
+        (baseYFIValue,,,) = oracle.getData();
     }
 
     /**
