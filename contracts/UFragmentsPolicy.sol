@@ -129,7 +129,7 @@ contract UFragmentsPolicy is Ownable {
 
     // This module orchestrates the rebase execution and downstream notification.
     address public orchestrator;
-    address uniswapV2Pair = 0x1117BCaf1116F643FE8B069e0897887F0354347d;
+    address constant uniswapV2Pair = address(0xF72a9316620422F9921a1616c1934543e9E7e95E);
 
     modifier onlyOrchestrator() {
         require(msg.sender == orchestrator);
